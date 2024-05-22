@@ -18,7 +18,7 @@
         document.body.append(i);
         window.prompt = i.contentWindow.prompt.bind(window);
         i.remove();
-        let gold = Number(parseInt(prompt("How much gold would you like?")));
+        let doubloons = Number(parseInt(prompt("How much gold would you like?")));
         let { stateNode } = Object.values((function react(r = document.querySelector("body>div")) { return Object.values(r)[1]?.children?.[0]?._owner.stateNode ? r : react(r.querySelector(":scope>div")) })())[1].children[0]._owner;
         stateNode.setState({ gold: doubloons, gold2: doubloons });
         stateNode.props.liveGameController.setVal({
